@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>WaveNeXt 2: ConvNeXt-Based Fast Neural Vocoders With Residual Denoising and Sub-Modeling for GAN and Diffusion Models</title>
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <h2><font color="#FF1493">WaveNeXt 2: ConvNeXt-Based Fast Neural Vocoders With Residual Denoising and Sub-Modeling for GAN and Diffusion Models</font></h2>
+      Anonymous submission to <a href="https://waspaa.com" target="_blank">WASPAA 2025</a>.</br>
+      <hr color="#13A9B8">
+      <img src="img/demo.png" height="600">
+      </br>
+      <hr color="#13A9B8">
+
+      <h4><font color="blue">Demo samples</font></h4>
+
+      <h5>English female</h5>
+      <table>
+        <tbody>
+          <tr>
+            <td>Ground truth</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_org.wav"/></audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <td>Wavenext1</td>
+            <td>HiFi-GAN</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_wn1.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/f_hf.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (2 iterations)</td>
+            <td>GAN-WaveNeXt 2 (2 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_wf-2.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/f_wn2-2.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (3 iterations)</td>
+            <td>GAN-WaveNeXt 2 (3 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_wf-3.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/f_wn2-3.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (4 iterations)</td>
+            <td>GAN-WaveNeXt 2 (4 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_wf-4.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/f_wn2-4.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (5 iterations)</td>
+            <td>GAN-WaveNeXt 2 (5 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_wf-5.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/f_wn2-5.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>FastDiff wo/ sub-modeling</td>
+            <td>Diff-WaveNeXt 2 wo/ sub-modeling</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_fd.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/f_wn2-d.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>FastDiff w/ sub-modeling</td>
+            <td>Diff-WaveNeXt 2 w/ sub-modeling (proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/f_sub-fd.wav"/></audio></td> 
+            <td><audio controls=""><source src="wav/f_sub-wn2-d.wav"/></audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+      <h5>English male</h5>
+      <table>
+        <tbody>
+          <tr>
+            <td>Ground truth</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_org.wav"/></audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <td>Wavenext1</td>
+            <td>HiFi-GAN</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_wn1.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_hf.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (2 iterations)</td>
+            <td>GAN-WaveNeXt 2 (2 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_wf-2.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_wn2-2.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (3 iterations)</td>
+            <td>GAN-WaveNeXt 2 (3 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_wf-3.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_wn2-3.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (4 iterations)</td>
+            <td>GAN-WaveNeXt 2 (4 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_wf-4.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_wn2-4.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>Wavefit (5 iterations)</td>
+            <td>GAN-WaveNeXt 2 (5 iterations)(proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_wf-5.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_wn2-5.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>FastDiff (4 steps) wo/ sub-modeling</td>
+            <td>Diff-WaveNeXt 2 (4 steps) wo/ sub-modeling</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_fd.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_wn2-d.wav"/></audio></td>
+          </tr>
+          <tr>
+            <td>FastDiff (4 steps) w/ sub-modeling</td>
+            <td>Diff-WaveNeXt 2 (4 steps) w/ sub-modeling (proposed)</td>
+          </tr>
+          <tr style="padding-bottom: 20px;">
+            <td><audio controls=""><source src="wav/m_sub-fd.wav"/></audio></td>
+            <td><audio controls=""><source src="wav/m_sub-wn2-d.wav"/></audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
